@@ -25,9 +25,10 @@ form.addEventListener('submit', async (event) => {
             window.location.href = './main.html'
         } else {
             const errorData = await response.json()
-            console.log('Ошибка авторизации: ' + errorData.message)
+            alert('Ошибка авторизации: ' + errorData.message)
         }
     } catch (error) {
         console.error('Ошибка:', error)
+        alert(error)
     }
 })

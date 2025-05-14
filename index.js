@@ -29,10 +29,11 @@ form.addEventListener('submit', async (event) => {
             window.location.href = './main.html'
         } else {
             const errorData = await response.json()
-            console.log('Ошибка регистрации: ' + errorData.message)
+            alert('Ошибка регистрации: ' + errorData.message)
         }
     } catch (error) {
         console.error('Ошибка:', error)
+        alert(error)
     }
 })
 
